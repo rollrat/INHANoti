@@ -1,0 +1,54 @@
+테스트	기간	특성	오류 메시지
+aerospaceParsingTest 통과	1초		
+apslParsingTest 통과	630ms		
+archParsingTest 통과	649ms		
+artsportsParsingTest 통과	459ms		
+bioParsingTest 통과	389ms		
+biologyParsingTest 통과	425ms		
+bizParsingTest 통과	419ms		
+chemengParsingTest 통과	379ms		
+chemistryParsingTest 통과	660ms		
+childParsingTest 통과	11초		
+chineseParsingTest 통과	404ms		
+civilParsingTest 통과	363ms		
+commParsingTest 실패	17ms		Test method NotiServer.Test.ParsingTest.commParsingTest threw exception:  System.ArgumentNullException: Value cannot be null. (Parameter 'html')
+consumerParsingTest 통과	409ms		
+cseParsingTest 통과	526ms		
+culturecmParsingTest 통과	402ms		
+deleParsingTest 통과	395ms		
+dmseParsingTest 실패	73ms		Assert.IsTrue failed. 0
+econParsingTest 통과	451ms		
+educationParsingTest 통과	429ms		
+eeParsingTest 통과	505ms		
+electricalParsingTest 통과	449ms		
+eneresParsingTest 통과	441ms		
+englishParsingTest 통과	496ms		
+environmentParsingTest 통과	429ms		
+fccollegeParsingTest 통과	713ms		
+foodnutriParsingTest 통과	494ms		
+franceParsingTest 통과	626ms		
+geoinfoParsingTest 통과	559ms		
+gfibaParsingTest 통과	518ms		
+historyParsingTest 통과	805ms		
+iceParsingTest 통과	374ms		
+ieParsingTest 통과	593ms		
+inhapolyParsingTest 통과	359ms		
+japanParsingTest 통과	448ms		
+koreaneduParsingTest 통과	539ms		
+kroeanParsingTest 통과	439ms		
+mathParsingTest 통과	408ms		
+mathedParsingTest 통과	439ms		
+mechParsingTest 실패	175ms		Test method NotiServer.Test.ParsingTest.mechParsingTest threw exception:  System.ArgumentNullException: Value cannot be null. (Parameter 'html')
+medicineParsingTest 통과	428ms		
+naoeParsingTest 통과	408ms		
+nursingParsingTest 통과	390ms		
+oceanParsingTest 통과	150ms		
+philosophyParsingTest 통과	464ms		
+physicaleduParsingTest 통과	416ms		
+physicsParsingTest 통과	315ms		
+politicalParsingTest 통과	347ms		
+publicadParsingTest 통과	397ms		
+socialeduParsingTest 통과	435ms		
+starParsingTest 통과	665ms		
+statisticsParsingTest 통과	665ms		
+welfareParsingTest 통과	443ms		
