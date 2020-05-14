@@ -122,7 +122,7 @@ namespace NotiServer
         {
             PrintVersion();
             Console.WriteLine(Encoding.UTF8.GetString(CompressUtils.Decompress(art_console)));
-            Console.WriteLine($"Copyright (C) 2020. Inha Unit AlarmBot(Notification Server) Project.");
+            Console.WriteLine($"Copyright (C) 2020. Inha Univ AlarmBot(Notification Server) Project.");
             Console.WriteLine($"E-Mail: rollrat.cse@gmail.com");
             Console.WriteLine($"Source-code: https://github.com/rollrat/inha-alarm");
             Console.WriteLine($"Source-code: https://github.com/rollrat/INHANoti");
