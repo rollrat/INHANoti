@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INHANoti", "INHANoti\INHANo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotiServer", "NotiServer\NotiServer.csproj", "{E51A9114-1020-4C02-9E63-1D8994716161}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotiServer.Test", "NotiServer.Test\NotiServer.Test.csproj", "{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,18 @@ Global
 		{E51A9114-1020-4C02-9E63-1D8994716161}.Release|iPhone.Build.0 = Release|Any CPU
 		{E51A9114-1020-4C02-9E63-1D8994716161}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{E51A9114-1020-4C02-9E63-1D8994716161}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Release|iPhone.Build.0 = Release|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{1F4ED6A1-5AEB-4148-9458-5FF3F9444B68}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
