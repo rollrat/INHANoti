@@ -33,6 +33,13 @@ namespace NotiServer
 
         [CommandLine("--start-bot", CommandType.OPTION, Info = "Start ChatBot server.", Help = "use --start-bot")]
         public bool StartBot;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        
+        [CommandLine("--start-server", CommandType.OPTION, Info = "Start Notification Http Server.", Help = "use --start-server")]
+        public bool StartServer;
     }
 
     public class Command
@@ -62,6 +69,10 @@ namespace NotiServer
             {
                 ProcessStartBot();
             }
+            else if (option.StartServer)
+            {
+                ProcessStartServer();
+            }
             else if (option.Error)
             {
                 Console.WriteLine(option.ErrorMessage);
@@ -72,7 +83,7 @@ namespace NotiServer
             else
             {
                 Console.WriteLine("Nothing to work on.");
-                Console.WriteLine("Enter './alarmbot --help' to get more information");
+                Console.WriteLine("Enter './NotiServer --help' to get more information");
             }
 
             return;
@@ -111,11 +122,12 @@ namespace NotiServer
         {
             PrintVersion();
             Console.WriteLine(Encoding.UTF8.GetString(CompressUtils.Decompress(art_console)));
-            Console.WriteLine($"Copyright (C) 2020. Inha Unit AlarmBot Project.");
+            Console.WriteLine($"Copyright (C) 2020. Inha Unit AlarmBot(Notification Server) Project.");
             Console.WriteLine($"E-Mail: rollrat.cse@gmail.com");
             Console.WriteLine($"Source-code: https://github.com/rollrat/inha-alarm");
+            Console.WriteLine($"Source-code: https://github.com/rollrat/INHANoti");
             Console.WriteLine($"");
-            Console.WriteLine("Usage: ./alarmbot [OPTIONS...]");
+            Console.WriteLine("Usage: ./NotiServer [OPTIONS...]");
 
             var builder = new StringBuilder();
             CommandLineParser.GetFields(typeof(Options)).ToList().ForEach(
@@ -145,7 +157,20 @@ namespace NotiServer
 
         public static void ProcessStartBot()
         {
+            Loop.EnableBot = true;
             ChatBot.BotManager.Instance.StartBots();
+
+            while (true)
+            {
+                Task.Run(async () => await Loop.LoopInternal());
+                Thread.Sleep(1000 * 60 * 10);
+            }
+        }
+
+        public static void ProcessStartServer()
+        {
+            Loop.EnableServer = true;
+            Server.Server.Instance.StartServer(Settings.Instance.Model.ServerSettings.WebServerPort);
 
             while (true)
             {

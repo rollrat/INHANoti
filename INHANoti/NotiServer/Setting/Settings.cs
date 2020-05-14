@@ -26,6 +26,8 @@ namespace NotiServer.Setting
 
         public BotSettings BotSettings;
 
+        public ServerSettings ServerSettings;
+
         /// <summary>
         /// Scheduler Thread Count
         /// </summary>
@@ -89,6 +91,10 @@ namespace NotiServer.Setting
                         AccessIdentifierMessage = ""
                     },
 
+                    ServerSettings = new ServerSettings
+                    {
+                        WebServerPort = 7979,
+                    }
                 };
             }
             Save();
@@ -161,6 +167,14 @@ namespace NotiServer.Setting
                     EnableDiscordBot = false,
                     DiscordClientId = "",
                     AccessIdentifierMessage = ""
+                };
+            }
+
+            if (Model.ServerSettings == null)
+            {
+                Model.ServerSettings = new ServerSettings
+                {
+                    WebServerPort = 7979,
                 };
             }
         }

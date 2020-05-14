@@ -16,6 +16,8 @@ namespace NotiServer
     public class Loop
     {
         public static int Count { get; private set; }
+        public static bool EnableBot { get; set; }
+        public static bool EnableServer { get; set; }
 
         public static async Task LoopInternal()
         {
@@ -38,7 +40,8 @@ namespace NotiServer
 
                         Log.Logs.Instance.Push($"[Loop] New item is added. -  IUA  - {cc.Title}");
 
-                        await BotManager.Instance.Notice(cc.ToString(), "MSG-MAIN");
+                        if (EnableServer)
+                            await BotManager.Instance.Notice(cc.ToString(), "MSG-MAIN");
                     }
                     catch { }
                 }
@@ -87,7 +90,8 @@ namespace NotiServer
                             ExtractManager.DepartmentDB.Add(cc[i]);
 
                             Log.Logs.Instance.Push($"[Loop] New item is added. -  DN  - {cc[i].Title}");
-                            await BotManager.Instance.Notice(cc[i].ToString(), "MSG-" + department.Item1);
+                            if (EnableServer)
+                                await BotManager.Instance.Notice(cc[i].ToString(), "MSG-" + department.Item1);
                         }
 
                     }
